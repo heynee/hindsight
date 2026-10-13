@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hindsight Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; --ink: #1f2a25; --muted: #5f6b66; --bg: #faf8f3; --accent: #3e6b5a; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #e9ece8; --muted: #a9b3ae; --bg: #171c1a; --accent: #9cc3b0; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 Georgia, "Times New Roman", serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+  h1 { font-size: 2rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; color: var(--accent); }
+  p, li { margin: 0 0 .75rem; }
+  .meta { color: var(--muted); font-size: .95rem; }
+  code { font: .95em ui-monospace, SFMono-Regular, Menlo, monospace; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Hindsight Privacy Policy</h1>
+  <p class="meta">Effective 13 October 2026 · Applies to the Hindsight Android app (<code>com.silver.hindsight</code>)</p>
+
+  <p>Hindsight is a voice journal that works on your phone. It has no account system and no servers of its own. The short version: what you say and write stays on your device, encrypted, unless you choose to export it.</p>
+
+  <h2>What the app stores on your device</h2>
+  <ul>
+    <li><strong>Journal entries</strong>: transcripts, your edits, personal notes, favourites, and the mood, themes and insights the on-device AI derives from them.</li>
+    <li><strong>Voice recordings</strong>, only if you turn on "Keep recordings". Otherwise audio is discarded as soon as it has been transcribed.</li>
+    <li><strong>Photos</strong> you attach to an entry (copied into the app's private storage).</li>
+    <li><strong>Weekly reflections</strong> generated from your entries.</li>
+    <li><strong>Settings</strong>, such as your speech language, reminder time and app-lock preference.</li>
+    <li><strong>Downloaded speech models</strong> (optional Whisper models for higher-accuracy transcription).</li>
+  </ul>
+  <p>Entries live in a database encrypted with a key held in the phone's hardware-backed keystore. The app opts out of Android cloud backup, so the database is never uploaded by the system. Use <em>Export journal</em> to make your own copy.</p>
+
+  <h2>What never leaves your device</h2>
+  <p>Hindsight does not collect, transmit or sell your entries, recordings, photos, mood data or usage behaviour. The developer has no way to see them. Transcription and AI analysis run on the phone:</p>
+  <ul>
+    <li><strong>Gemini Nano</strong> (through Google's AICore and ML Kit GenAI SDKs) writes the insights, themes, mood estimates and weekly reflections on-device.</li>
+    <li><strong>Speech recognition</strong> uses on-device models: ML Kit GenAI speech recognition when recordings are kept, otherwise the phone's built-in speech recogniser. The built-in recogniser is provided by your device maker or Google and is governed by their policies; on most devices it works offline.</li>
+    <li><strong>Whisper</strong> transcription, if you download a model, runs entirely on the phone.</li>
+  </ul>
+
+  <h2>Network use</h2>
+  <p>The app connects to the internet only to:</p>
+  <ul>
+    <li>download optional Whisper speech models from GitHub (the request exposes your IP address to GitHub, as any download does);</li>
+    <li>let Google's AICore service fetch or update the Gemini Nano model on your device;</li>
+    <li>open the Google Play listing or this page when you tap those links in Settings.</li>
+  </ul>
+  <p>No journal content is included in any of these connections.</p>
+
+  <h2>Google SDK diagnostics</h2>
+  <p>Hindsight uses Google's ML Kit and AICore SDKs for on-device AI. These SDKs may send Google technical diagnostics about themselves, such as whether a model was available, performance timing, error codes and device information. Such diagnostics do not contain your entries or audio. They are governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and the <a href="https://developers.google.com/ml-kit/terms">ML Kit Terms</a>.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>Microphone</strong>: to record and transcribe your voice. Only while you are recording.</li>
+    <li><strong>Notifications</strong> (optional): daily reminders, occasional check-ins and the weekly reflection notice. Each is off until you enable it or grant the permission.</li>
+    <li><strong>Biometrics / device credential</strong> (optional): to lock the app. Hindsight never sees your biometric data; the system handles the prompt.</li>
+    <li><strong>Internet</strong>: only for the downloads described above.</li>
+  </ul>
+
+  <h2>Sharing and export</h2>
+  <p>When you export your journal, the app creates a file and hands it to the share sheet. Where it goes from there (email, cloud drive, another app) is your choice and that service's responsibility. Exports are plain text or JSON and are not encrypted.</p>
+
+  <h2>Deleting your data</h2>
+  <p>Delete individual entries, recordings or photos inside the app, or uninstall Hindsight to remove everything it stored. Because there is no account and no server copy, there is nothing further to delete on our side.</p>
+
+  <h2>Children</h2>
+  <p>Hindsight is not directed at children under 13 and does not knowingly collect information from them.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version will be published at this address with an updated effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy: <a href="mailto:silver@onoffapp.com">silver@onoffapp.com</a></p>
+</main>
+</body>
+</html>
